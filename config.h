@@ -59,8 +59,6 @@ static char termname[] = "st-256color";
 
 static unsigned int tabspaces = 8;
 
-/* bg opacity */
-static const int alpha = 0xbd;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -88,17 +86,25 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor
  */
+#ifdef SOLARIZED_DARK
+static const int alpha = 0xad;
 static unsigned int defaultfg = 12;
 static unsigned int defaultbg = 8;
 static unsigned int defaultcs = 14;
 
-/*
- * Colors used, when the specific fg == defaultfg. So in reverse mode this
- * will reverse too. Another logic would only make the simple feature too
- * complex.
- */
 static unsigned int defaultitalic = 11;
 static unsigned int defaultunderline = 7;
+#endif
+
+#ifdef SOLARIZED_LIGHT
+static const int alpha = 0xff;
+static unsigned int defaultfg = 11;
+static unsigned int defaultbg = 15;
+static unsigned int defaultcs = 10;
+
+static unsigned int defaultitalic = 12;
+static unsigned int defaultunderline = 0;
+#endif
 
 /* Internal mouse shortcuts. */
 /* Beware that overloading Button1 will disable the selection. */
