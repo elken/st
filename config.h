@@ -97,9 +97,9 @@ static unsigned int defaultunderline = 7;
 #endif
 
 #ifdef SOLARIZED_LIGHT
-static const int alpha = 0xff;
+static const int alpha = 0xee;
 static unsigned int defaultfg = 11;
-static unsigned int defaultbg = 15;
+static unsigned int defaultbg = 7;
 static unsigned int defaultcs = 10;
 
 static unsigned int defaultitalic = 12;
