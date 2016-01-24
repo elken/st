@@ -19,7 +19,7 @@ LIBS = -L/usr/lib -lc -L${X11LIB} -lm -lrt -lX11 -lutil -lXext -lXft -lXrender\
        `pkg-config --libs freetype2`
 
 # flags
-CFLAGS += -g -std=c99 -pedantic -Wall -Wvariadic-macros -Os ${INCS} ${CPPFLAGS} -DVERSION=\"${VERSION}\" -D_XOPEN_SOURCE=600 -DSOLARIZED_LIGHT
+CFLAGS += -g -std=c99 -pedantic -Wall -Wvariadic-macros -Os ${INCS} ${CPPFLAGS} -DVERSION=\"${VERSION}\" -D_XOPEN_SOURCE=600 -DGRUVBOX
 LDFLAGS += -g ${LIBS}
 
 # compiler and linker
